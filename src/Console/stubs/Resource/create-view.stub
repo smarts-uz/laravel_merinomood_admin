@@ -1,0 +1,24 @@
+<template>
+    <createForm :resource="lowerResource" />
+</template>
+
+<script>
+    import CreateForm from 'Vendor/js/components/Templates/Create'
+
+    export default {
+        components: {
+            CreateForm
+        },
+
+        data() {
+            return {
+                lowerResource: {}
+            }
+        },
+
+        async created() {
+            const { data } = await Admin.request('snakedResourceName').create()
+            this.lowerResource = data;
+        }
+    }
+</script>

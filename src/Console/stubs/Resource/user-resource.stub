@@ -1,0 +1,35 @@
+<?php
+
+namespace {{DummyNamespace}}Admin;
+
+use Arniro\Admin\Fields\Password;
+use Arniro\Admin\Fields\Text;
+use Arniro\Admin\Http\Resources\Resource;
+use {{DummyNamespace}}User as UserModel;
+
+class User extends Resource
+{
+    public static $model = UserModel::class;
+
+    public static $search = ['id'];
+
+    public static $paginate = 25;
+
+    public function fields()
+    {
+        return [
+            Text::make('Name', 'name')
+                ->rules('required'),
+
+			Text::make('Email', 'email')
+                ->rules('required', 'email')
+                ->creationRules('unique:users')
+                ->updateRules('unique:users,email,{{resourceId}}'),
+
+            Password::make('Password', 'password')
+                ->withConfirmation()
+                ->rules('confirmed')
+                ->creationRules('required')
+        ];
+    }
+}

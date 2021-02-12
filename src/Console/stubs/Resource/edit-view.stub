@@ -1,0 +1,26 @@
+<template>
+    <editForm :resource="lowerResource" />
+</template>
+
+<script>
+    import editForm from 'Vendor/js/components/Templates/Edit'
+
+    export default {
+        components: {
+            editForm
+        },
+
+        data() {
+            return {
+                lowerResource: {},
+            }
+        },
+
+        async created() {
+            const { data } = await Admin.request('snakedResourceName').edit(this.$route.params.id)
+            this.lowerResource = data
+        }
+    }
+</script>
+
+

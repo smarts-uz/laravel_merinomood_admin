@@ -1,0 +1,12 @@
+import Router from 'Vendor/js/utils/Router'
+import Dashboard from './views/Dashboard'
+
+export default [
+    {
+        path: '/',
+        component: Dashboard
+    },
+
+    ...Router
+        .routes()
+]

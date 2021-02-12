@@ -1,0 +1,21 @@
+{
+    "Navigation": "Навигация",
+    "Dashboard": "Панель",
+    "Resources": "Ресурсы",
+    "Search": "Поиск",
+    "Attach": "Прикрепить",
+    "Create": "Создать",
+    "Create and add another": "Создать и добавить еще",
+    "Update": "Обновить",
+    "Action": "Действие",
+    "There is no data": "Данных нет",
+    "Are you sure you want to delete selected resources?": "Вы уверены, что хотите удалить выбранные ресурсы?",
+    "Resource is deleted successfully!": "Ресурс успешно удален!",
+    "Are you sure you want to detach selected resources?": "Вы уверены, что хотите открепить выбранные ресурсы?",
+    "Resource is detached successfully!": "Ресурс успешно откреплен!",
+    "Resource is created successfully!": "Ресурс успешно создан!",
+    "Resource is updated successfully!": "Ресурс успешно обновлен!",
+    "Back": "Назад",
+    "Edit": "Изменить",
+    "Delete": "Удалить"
+}

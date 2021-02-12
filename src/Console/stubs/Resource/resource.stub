@@ -1,0 +1,19 @@
+<?php
+
+namespace {{DummyNamespace}}Admin;
+
+use Arniro\Admin\Fields\Text;
+use Arniro\Admin\Http\Resources\Resource;
+
+class DummyClass extends Resource
+{
+    public static $model = 'DummyModel';
+    public static $search = ['id'];
+
+    public function fields()
+    {
+        return [
+            {{ fields }}
+        ];
+    }
+}

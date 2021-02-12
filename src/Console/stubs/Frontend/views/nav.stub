@@ -1,0 +1,3 @@
+<li class="sidebar__title">@{{ __('Navigation') }}</li>
+<nav-link to="/" icon="meter">@{{ __('Dashboard') }}</nav-link>
+<li class="sidebar__title">@{{ __('Resources') }}</li>

@@ -1,0 +1,22 @@
+<template>
+    <index :resources="resourceName" :via="via" :label="label"
+        @update="resourceName = $event" />
+</template>
+
+<script>
+    import { Index, Actions, Fetch } from 'Vendor/js/components/Templates/Index'
+
+    export default {
+        components: {
+            Index,
+            Actions
+        },
+        mixins: [Fetch],
+        data() {
+            return {
+                resourceName: {},
+                route: 'snakedResourceName'
+            }
+        }
+    }
+</script>
